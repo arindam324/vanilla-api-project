@@ -1,5 +1,26 @@
 const article = document.getElementById("article");
 
+
+const Data = [
+  {
+    id:0,
+    name:"Arindam Roy"
+  },
+  {
+    id:1,
+    name:"Mrinal Sarkar"
+  },
+  {
+    id:2,
+    name:"Bhaskar Roy"
+  },
+  {
+    id:3,
+    name:"Bikram Roy"
+  }
+]
+
+
 async function fetchPosts() {
   const response = await fetch(
     "https://fakestoreapi.com/products"
@@ -21,6 +42,5 @@ fetchPosts().then(data => {
         `;
         document.body.appendChild(article);
       });
-      
 });
 
